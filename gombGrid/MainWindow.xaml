@@ -1,0 +1,30 @@
+﻿<Window x:Class="gombGrid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gombGrid"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label Content="2"/>
+            <Slider x:Name="sliSor" Minimum="2" Maximum="10" IsSnapToTickEnabled="True" Width="300"/>
+            <Label Content="10"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 50 0 0">
+            <Label Content="2"/>
+            <Slider x:Name="sliOszlop" Minimum="2" Maximum="10" IsSnapToTickEnabled="True" Width="300"/>
+            <Label Content="10"/>
+        </StackPanel>
+        <Button x:Name="btnGeneral" Height="60" Margin="50" VerticalAlignment="Bottom" Content="Generál" FontSize="40" Click="btnGeneral_Click"/>
+        <UniformGrid x:Name="ugGombok" Grid.Row="1"></UniformGrid>
+    
+    </Grid>
+
+</Window>
